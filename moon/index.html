@@ -12,6 +12,7 @@
         <label>Nhập ID:</label>
         <input id="ID">
         <button onclick="getID()">Ok</button>
+        <button onclick="nextQuestion()">Câu tiếp theo</button>
     </form>
     <br>
     <div id="ans">
@@ -20,10 +21,19 @@
 
     <script>
         const inp = document.getElementById("inpform")
+        const IDInput = document.getElementById("ID")
         inp.addEventListener("submit", function (event) {
             event.preventDefault()
             getID()
         })
+
+        function nextQuestion() {
+            n = parseInt(IDInput.value)
+            n++
+            IDInput.value = n.toString()
+
+            getQuestion(IDInput.value)
+        }
 
 
         function getQuestion(ID) {
@@ -31,6 +41,9 @@
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                 }
             }).then((r) => r.json().then((res) => {
                 document.getElementById("ans").innerHTML = res.titleEnglish + "<br>" + res.questionText + `<br>A. ${res.a}<br>B.${res.b}<br>C. ${res.c}<br>D. ${res.d}<br>Đáp Án: ${res.key}<br><br>${res.answer}<br>`;
