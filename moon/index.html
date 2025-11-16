@@ -5,68 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lay id cau hoi moon nhe cac b</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <form id="inpform">
-        <label>Nhập ID:</label>
-        <input id="ID">
-        <button onclick="getID()">Ok</button>
-        <button onclick="nextQuestion()">Câu tiếp theo</button>
+    <form id="inpform" class="input-form">
+        <center><label style="margin-left: 0px;margin-right: 11px;">Nhập ID:</label>
+            <input id="ID" class="rounded-input">
+            <button class="btn" onclick="getID()">Ok</button>
+            <button class="btn" onclick="nextQuestion()">Câu tiếp theo</button>
+        </center>
     </form>
     <br>
     <div id="ans">
     </div>
     <br>
-
-    <script>
-        const inp = document.getElementById("inpform")
-        const IDInput = document.getElementById("ID")
-        inp.addEventListener("submit", function (event) {
-            event.preventDefault()
-            getID()
-        })
-
-        function nextQuestion() {
-            n = parseInt(IDInput.value)
-            n++
-            IDInput.value = n.toString()
-
-            getQuestion(IDInput.value)
-        }
-
-
-        function getQuestion(ID) {
-            fetch(` https://courseapi.moon.vn/api/Course/ItemQuestion/${ID}`, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-                    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-                }
-            }).then((r) => r.json().then((res) => {
-                document.getElementById("ans").innerHTML = res.titleEnglish + "<br>" + res.questionText + `<br>A. ${res.a}<br>B.${res.b}<br>C. ${res.c}<br>D. ${res.d}<br>Đáp Án: ${res.key}<br><br>${res.answer}<br>`;
-            }))
-        }
-
-        function getID() {
-            ID = document.getElementById("ID").value
-
-            fetch(`https://courseapi.moon.vn/api/Course/SearchID/${ID}`, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkZBQTRRWUJRSVZFREw3Q1YiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiRkFBNFFZQlFJVkVETDdDViIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Im1lbWJlciIsInVzZXJuYW1lIjoiRkFBNFFZQlFJVkVETDdDViIsImF2YXRhciI6Ii9pbWFnZXMvZGVmYXVsdC5qcGciLCJmdWxsbmFtZSI6Ik5ndXnhu4VuIFRoYW5oICIsImV4cGlyZXMiOiIxNzgxNDAwMjU0Iiwic2Vzc2lvbmxvZ2ludG9rZW4iOiJXUlZCWU5DSjZWNDVYUURJTk9DMlFNS1FVQzc3WUQyNSIsIm5iZiI6MTc0OTg2NDI1NCwiZXhwIjoxNzgxNDAwMjU0LCJpc3MiOiJodHRwczovL21vb24udm4iLCJhdWQiOiJodHRwczovL21vb24udm4ifQ.F3KXfX93n07WSHBf8cENyF4FAuxcc46OJ5OpVZI437o'
-                }
-            }).then((Response) => { Response.json().then((r) => { getQuestion(r.id) }) })
-
-        }
-    </script>
-
     <br>
     <br>
     <label style="font-size: xx-small;">nay cua Nguyen Quoc Trung 12a15 lam nhe cac b</label>
+    <script src="script.js"></script>
 </body>
 
 </html>
