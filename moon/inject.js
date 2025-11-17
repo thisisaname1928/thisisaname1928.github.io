@@ -11,7 +11,6 @@ async function onInject() {
     sc.innerHTML = jsDat;
     document.body.appendChild(sc);
 }
-onInject();
 
 async function updateL() {
     res = await fetch('https://thisisaname1928.github.io/moon/index.html', { method: 'GET' });
@@ -23,12 +22,15 @@ async function updateL() {
 
     // add style sheet
     const head = document.createElement('head')
-    document.appendChild(head)
-    const s = document.createElement('link')
-    s.href = "https://thisisaname1928.github.io/moon/styles.css"
-    s.rel = "stylesheet"
 
-    document.head.appendChild(s)
+    res = await fetch('https://thisisaname1928.github.io/moon/styles.css', { method: 'GET' });
+    cssDat = await res.text();
+    const s = document.createElement('style')
+    s.innerHTML = cssDat
+    head.appendChild(s)
+    document.head.replaceWith(head)
+
+
     // add js
     res = await fetch('https://thisisaname1928.github.io/moon/script.js', { method: 'GET' });
     jsDat = await res.text();
