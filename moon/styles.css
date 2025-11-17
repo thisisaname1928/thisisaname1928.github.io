@@ -9,8 +9,6 @@ body {
     margin-left: 5px;
     margin-right: 5px;
     padding: 4px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 1000px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
 }
 
 .rounded-input:hover {
@@ -19,7 +17,8 @@ body {
 
 .input-form {
     background-color: white;
-
+    z-index: 999;
+    position: fixed;
     height: 30px;
     padding: 5px;
     border-radius: 9px;
