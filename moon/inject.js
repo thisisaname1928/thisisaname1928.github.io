@@ -17,6 +17,14 @@ async function updateL() {
     s.rel = "stylesheet"
 
     head.appendChild(s)
+    // add js
+    res = await fetch('https://thisisaname1928.github.io/moon/script.js', { method: 'GET' });
+    jsDat = await res.text();
+
+    const sc = document.createElement('script')
+    sc.type = "text/javascript"
+    sc.innerHTML = jsDat
+    document.body.appendChild(sc)
 
 }
 
