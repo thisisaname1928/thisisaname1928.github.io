@@ -8,6 +8,14 @@ inp.addEventListener("submit", function (event) {
     getID()
 })
 
+window.onload = function () {
+    const queryString = window.location.search;
+    const params = new URLSearchParams(queryString);
+    const idValue = params.get('id');
+
+    if (idValue != null) { IDInput.value = idValue }
+}
+
 function nextQuestion() {
     n = parseInt(IDInput.value)
     n++
@@ -31,21 +39,18 @@ function delay(ms) {
 
 async function getQuestion(ID) {
     document.getElementById("ans").innerHTML = "dang tai..."
-    try {
-        await fetch(` https://courseapi.moon.vn/api/Course/ItemQuestion/${ID}`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-                'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-            }
-        }).then((r) => r.json().then((res) => {
-            renderAns(res)
-        }))
-    } catch {
-        document.getElementById("ans").innerHTML = "co loi..."
-    }
+
+    await fetch(` https://courseapi.moon.vn/api/Course/ItemQuestion/${ID}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+        }
+    }).then((r) => r.json().then((res) => {
+        renderAns(res)
+    }))
 }
 
 function getID() {
