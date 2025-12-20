@@ -128,6 +128,14 @@ function checkAns() {
             } else {
                 item = document.getElementById(`QUES.0.TN.${ans}`)
                 item.innerHTML += "<i class=\"material-icons icon\">close</i>"
+
+                for (counter = 0; counter < 4; counter++) {
+                    if (currentQues.TNAnswers[counter]) {
+                        item = document.getElementById(`QUES.0.TN.${counter}`)
+                        item.innerHTML += "<i class=\"material-icons icon\">check</i>"
+                        break
+                    }
+                }
             }
             break
         case 0x13:
@@ -187,7 +195,6 @@ async function doTest(blob) {
     }
     catch {
         console.log("NOT OK")
-        alert("FILE đầu vào lỗi r")
         return
     }
 
