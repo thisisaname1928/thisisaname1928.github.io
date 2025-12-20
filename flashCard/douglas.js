@@ -156,18 +156,6 @@ function checkAns() {
 
     currentQuesIdx++
 
-
-    if (currentQuesIdx >= n) {
-        document.getElementById("testContent").innerHTML = ''
-        hideElement("nextQues")
-
-        showElement("endTest")
-        document.getElementById("doneQuesNumL").innerHTML = n
-        document.getElementById("rightQuesNumL").innerHTML = numOfRightQues
-
-        return
-    }
-
     setRightQuesNum(numOfRightQues)
 }
 
@@ -188,6 +176,8 @@ function redoTest() {
 }
 
 async function doTest(blob) {
+    document.getElementById("testContent").innerHTML = 'Chờ xíu, đang tải!'
+
     const blobReader = new zip.BlobReader(await blob)
     curBlob = blob
     curBlobReader = blobReader
@@ -216,6 +206,18 @@ async function doTest(blob) {
 }
 
 async function nextQuestion(i) {
+
+    if (currentQuesIdx >= n) {
+        document.getElementById("testContent").innerHTML = ''
+        hideElement("nextQues")
+
+        showElement("endTest")
+        document.getElementById("doneQuesNumL").innerHTML = n
+        document.getElementById("rightQuesNumL").innerHTML = numOfRightQues
+
+        return
+    }
+
     renderTest([await questions[i]])
     setQuesIdx(i + 1, n)
     setRightQuesNum(numOfRightQues)
@@ -451,4 +453,18 @@ document.getElementById("fileInput").addEventListener('change', (e) => {
 
 document.getElementById("fileInputBtn").addEventListener("click", () => {
     document.getElementById("fileInput").click()
+})
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const params = new URLSearchParams(window.location.search);
+
+    link = params.get("useLink")
+
+    // fetch 4 file
+    request = await fetch(link)
+    data = await request.arrayBuffer()
+
+    blob = new Blob([data])
+
+    doTest(blob)
 })
