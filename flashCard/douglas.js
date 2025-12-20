@@ -460,6 +460,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     link = params.get("useLink")
 
+    if (!link || link == "") {
+        return
+    }
+
     // fetch 4 file
     request = await fetch(link)
     data = await request.arrayBuffer()
