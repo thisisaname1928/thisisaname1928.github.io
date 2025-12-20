@@ -187,6 +187,7 @@ async function doTest(blob) {
     }
     catch {
         console.log("NOT OK")
+        alert("FILE đầu vào lỗi r")
         return
     }
 
