@@ -45,42 +45,43 @@
                     bài</button>
                 <p id="doTestStatus" style="color: rgb(243, 114, 114)"></p>
             </div>
+
+            <!-- end test form-->
+
+            <div id="endTest" class="question-card hidden-element">
+                <center>
+                    <h1>Đã hoàn thành</h1>
+                </center>
+                <table style="margin-left: 30px;margin-right: 30px;">
+                    <tr>
+                        <td style="padding-right: 100px;"><b>Tổng số câu đã làm:</b> </td>
+                        <td id="doneQuesNumL">1</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+
+                        </td>
+                    </tr>
+                    <tr style="margin-bottom: 20px;">
+                        <td><b>Số câu đúng:</b> </td>
+                        <td id="rightQuesNumL">1</td>
+                    </tr>
+                </table>
+                <center><button style="margin-top: 50px;" id="redo" onclick="redoTest()" class="mode-toggle-button">Làm
+                        lại lần
+                        nữa</button><button style="margin-left: 20px;" id="newTest"
+                        onclick="window.location.href = window.location.origin + window.location.pathname;"
+                        class="mode-toggle-button">Làm
+                        bài
+                        mới</button></center>
+
+                <div style="height: 10px;"></div>
+            </div>
+
             <div id="testContent">
             </div>
 
-            <!-- end test form-->
-            <center>
-                <div id="endTest" class="question-card hidden-element">
-                    <center>
-                        <h1>Đã hoàn thành</h1>
-                    </center>
-                    <table style="margin-left: 30px;margin-right: 30px;">
-                        <tr>
-                            <td style="padding-right: 100px;"><b>Tổng số câu đã làm:</b> </td>
-                            <td id="doneQuesNumL">1</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <br>
-
-                            </td>
-                        </tr>
-                        <tr style="margin-bottom: 20px;">
-                            <td><b>Số câu đúng:</b> </td>
-                            <td id="rightQuesNumL">1</td>
-                        </tr>
-                    </table>
-                    <center><button style="margin-top: 50px;" id="redo" onclick="redoTest()"
-                            class="mode-toggle-button">Làm lại lần
-                            nữa</button><button style="margin-left: 20px;" id="newTest"
-                            onclick="window.location.href = window.location.origin + window.location.pathname;"
-                            class="mode-toggle-button">Làm
-                            bài
-                            mới</button></center>
-
-                    <div style="height: 10px;"></div>
-                </div>
-            </center>
             <div>
                 <button style="margin-top: 50px;" id="checkAnswer" onclick="checkAns()"
                     class="mode-toggle-button hidden-element">Kiểm tra đáp

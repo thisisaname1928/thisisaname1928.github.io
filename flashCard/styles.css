@@ -657,3 +657,9 @@
             white-space: pre-wrap;
             overflow-wrap: break-word;
         }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-x: auto;
+        }

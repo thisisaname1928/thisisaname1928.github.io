@@ -109,6 +109,7 @@ let n = 0
 let curBlobReader
 let numOfRightQues = 0
 let curBlob
+let curAnsSheet
 
 function checkAns() {
 
@@ -137,6 +138,8 @@ function checkAns() {
                     }
                 }
             }
+
+            curAnsSheet[currentQuesIdx][0] = ans
             break
         case 0x13:
             break
@@ -144,6 +147,8 @@ function checkAns() {
             ans = getTNDSAnswer(0)
             nr = 0
             for (i = 0; i < 4; i++) {
+                chooseTNDSOption(0, i, ans[i], true)
+
                 if (ans[i] == currentQues.TNAnswers[i]) {
                     nr++
                     item = document.getElementById(`QUES.0.TNDS.${i}`)
@@ -153,6 +158,7 @@ function checkAns() {
                     item.innerHTML += "<i class=\"material-icons icon\">close</i>"
                 }
 
+                curAnsSheet[currentQuesIdx][i] = ans[i]
             }
 
             if (nr == 4) numOfRightQues++
@@ -167,7 +173,60 @@ function checkAns() {
     setRightQuesNum(numOfRightQues)
 }
 
+function checkAnsEndTest(currentQues, i) {
 
+    if (!currentQues.type) {
+        return false
+    }
+
+    switch (currentQues.type) {
+        case 0x12:
+            ans = curAnsSheet[i][0]
+
+            if (currentQues.TNAnswers[ans]) {
+                item = document.getElementById(`QUES.${i}.TN.${ans}`)
+                item.innerHTML += "<i class=\"material-icons icon\">check</i>"
+            } else {
+                item = document.getElementById(`QUES.${i}.TN.${ans}`)
+                item.innerHTML += "<i class=\"material-icons icon\">close</i>"
+
+                for (counter = 0; counter < 4; counter++) {
+                    if (currentQues.TNAnswers[counter]) {
+                        item = document.getElementById(`QUES.${i}.TN.${counter}`)
+                        item.innerHTML += "<i class=\"material-icons icon\">check</i>"
+                        break
+                    }
+                }
+            }
+
+            chooseTNOption(i, ans, true)
+
+            break
+        case 0x13:
+            break
+        case 0x15:
+            ans = curAnsSheet[i]
+
+            for (j = 0; j < 4; j++) {
+                if (ans[j]) {
+                    chooseTNDSOption(i, j, true, true)
+                } else {
+                    chooseTNDSOption(i, j, false, true)
+                }
+
+                if (ans[j] == currentQues.TNAnswers[j]) {
+                    item = document.getElementById(`QUES.${i}.TNDS.${j}`)
+                    item.innerHTML += "<i class=\"material-icons icon\">check</i>"
+                } else {
+                    item = document.getElementById(`QUES.${i}.TNDS.${j}`)
+                    item.innerHTML += "<i class=\"material-icons icon\">close</i>"
+                }
+
+            }
+
+    }
+
+}
 
 function setQuesIdx(i, n) {
     document.getElementById("quesIdx").innerText = `Câu ${i}/${n}`
@@ -203,6 +262,11 @@ async function doTest(blob) {
 
     n = questions.length
 
+    curAnsSheet = []
+    for (i = 0; i < n; i++) {
+        curAnsSheet.push([false, false, false, false])
+    }
+
     numOfRightQues = 0
 
     showElement("quesIdx")
@@ -223,6 +287,13 @@ async function nextQuestion(i) {
         showElement("endTest")
         document.getElementById("doneQuesNumL").innerHTML = n
         document.getElementById("rightQuesNumL").innerHTML = numOfRightQues
+
+        renderTestNoOnclick(questions)
+        normalizeDouImgPath()
+
+        for (i = 0; i < n; i++) {
+            checkAnsEndTest(questions[i], i)
+        }
 
         return
     }
@@ -308,6 +379,87 @@ async function renderTest(questions) {
         <div class="option-item" id="QUES.${i}.TNDS.3">
             <button class="tnds-ans-r" id="QUES.${i}.TNDS.3.R" onclick="chooseTNDSOption(${i}, 3, true, true)">D</button>
             <button class="tnds-ans-w" id="QUES.${i}.TNDS.3.W" onclick="chooseTNDSOption(${i}, 3, false, true)">S</button>
+            <div class="option-letter">d) </div>
+            <div class="option-text">${questions[i].answers[3]}</div>
+        </div>
+    </div>
+</div>`
+        }
+    }
+}
+
+async function renderTestNoOnclick(questions) {
+    testContent = document.getElementById("testContent")
+    testContent.innerHTML = ''
+
+    // render questions
+    for (i = 0; i < questions.length; i++) {
+        if (questions[i].type == 0x12) { // TN
+            testContent.innerHTML += `
+<div class="question-card" id="QUES.${i}.TN">
+    <div class="question-text">
+        Câu ${currentQuesIdx + 1} (Trắc nghiệm): ${questions[i].content}
+    </div>
+    <div class="options-list">
+        <div class="option-item" id="QUES.${i}.TN.0">
+            <div class="option-letter">A.</div>
+            <div class="option-text">${questions[i].answers[0]}</div>
+        </div>
+        <div class="option-item" id="QUES.${i}.TN.1">
+            <div class="option-letter">B.</div>
+            <div class="option-text">${questions[i].answers[1]}</div>
+        </div>
+        <div class="option-item" id="QUES.${i}.TN.2">
+            <div class="option-letter">C.</div>
+            <div class="option-text">${questions[i].answers[2]}</div>
+        </div>
+        <div class="option-item" id="QUES.${i}.TN.3">
+            <div class="option-letter">D.</div>
+            <div class="option-text">${questions[i].answers[3]}</div>
+        </div>
+    </div>
+</div>`
+        } else if (questions[i].type == 0x13) {
+            testContent.innerHTML += `    
+    <div class="question-card" id="QUES.${i}.TLN">
+        <div class="question-text">
+            Câu ${currentQuesIdx + 1} (Trắc nghiệm trả lời ngắn): ${questions[i].content}
+        </div>
+        <div class="TLN-input-container">
+            <input class="square-input" type="text" maxlength="1" oninput="chooseTLNAnswer(${i}, 0)" id="QUES.${i}.TLN.0">
+            <input class="square-input" type="text" maxlength="1" oninput="chooseTLNAnswer(${i}, 1)" id="QUES.${i}.TLN.1">
+            <input class="square-input" type="text" maxlength="1" oninput="chooseTLNAnswer(${i}, 2)" id="QUES.${i}.TLN.2">
+            <input class="square-input" type="text" maxlength="1" oninput="chooseTLNAnswer(${i}, 3)" id="QUES.${i}.TLN.3">
+        </div>
+    </div>`
+        } else if (questions[i].type == 0x15) {
+            testContent.innerHTML += `
+<div class="question-card" id="QUES.${i}.TNDS">
+    <div class="question-text" >
+        Câu ${currentQuesIdx + 1} (Trắc nghiệm đúng sai): ${questions[i].content}
+    </div>
+    <div class="options-list">
+        <div class="option-item" id="QUES.${i}.TNDS.0">
+            <button class="tnds-ans-r" id="QUES.${i}.TNDS.0.R">D</button>
+            <button class="tnds-ans-w" id="QUES.${i}.TNDS.0.W">S</button>
+            <div class="option-letter">a) </div>
+            <div class="option-text">${questions[i].answers[0]}</div>
+        </div>
+        <div class="option-item" id="QUES.${i}.TNDS.1">
+            <button class="tnds-ans-r" id="QUES.${i}.TNDS.1.R">D</button>
+            <button class="tnds-ans-w" id="QUES.${i}.TNDS.1.W">S</button>
+            <div class="option-letter">b) </div>
+            <div class="option-text">${questions[i].answers[1]}</div>
+        </div>
+        <div class="option-item" id="QUES.${i}.TNDS.2">
+            <button class="tnds-ans-r" id="QUES.${i}.TNDS.2.R">D</button>
+            <button class="tnds-ans-w" id="QUES.${i}.TNDS.2.W">S</button>
+            <div class="option-letter">c) </div>
+            <div class="option-text">${questions[i].answers[2]}</div>
+        </div>
+        <div class="option-item" id="QUES.${i}.TNDS.3">
+            <button class="tnds-ans-r" id="QUES.${i}.TNDS.3.R">D</button>
+            <button class="tnds-ans-w" id="QUES.${i}.TNDS.3.W">S</button>
             <div class="option-letter">d) </div>
             <div class="option-text">${questions[i].answers[3]}</div>
         </div>
