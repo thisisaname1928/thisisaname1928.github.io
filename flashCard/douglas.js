@@ -398,7 +398,7 @@ async function renderTestNoOnclick(questions) {
             testContent.innerHTML += `
 <div class="question-card" id="QUES.${i}.TN">
     <div class="question-text">
-        Câu ${currentQuesIdx + 1} (Trắc nghiệm): ${questions[i].content}
+        Câu ${i + 1} (Trắc nghiệm): ${questions[i].content}
     </div>
     <div class="options-list">
         <div class="option-item" id="QUES.${i}.TN.0">
@@ -423,7 +423,7 @@ async function renderTestNoOnclick(questions) {
             testContent.innerHTML += `    
     <div class="question-card" id="QUES.${i}.TLN">
         <div class="question-text">
-            Câu ${currentQuesIdx + 1} (Trắc nghiệm trả lời ngắn): ${questions[i].content}
+            Câu ${i + 1} (Trắc nghiệm trả lời ngắn): ${questions[i].content}
         </div>
         <div class="TLN-input-container">
             <input class="square-input" type="text" maxlength="1" oninput="chooseTLNAnswer(${i}, 0)" id="QUES.${i}.TLN.0">
@@ -436,7 +436,7 @@ async function renderTestNoOnclick(questions) {
             testContent.innerHTML += `
 <div class="question-card" id="QUES.${i}.TNDS">
     <div class="question-text" >
-        Câu ${currentQuesIdx + 1} (Trắc nghiệm đúng sai): ${questions[i].content}
+        Câu ${i + 1} (Trắc nghiệm đúng sai): ${questions[i].content}
     </div>
     <div class="options-list">
         <div class="option-item" id="QUES.${i}.TNDS.0">

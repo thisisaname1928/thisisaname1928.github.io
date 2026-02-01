@@ -1,0 +1,459 @@
+{
+    "revision": 57022,
+    "testDuration": 0,
+    "questions": [
+        {
+            "stype": "NONE",
+            "questions": [
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Để biến một phần tử nội tuyến thành phần tử khối, ta cần gán giá trị block cho thuộc tính CSS nào sau đây?\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e position  \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e float   \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e display  \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e overflow\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        false,
+                        false,
+                        true,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Phần tử ‘\u003cspan\u003e‘ thuộc loại phần tử nào?\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e inline  \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e block    \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e flex   \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e grid\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        true,
+                        false,
+                        false,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Theo quy chuẩn HTML cơ bản, phát biểu nào sau đây là đúng về mối quan hệ giữa phần tử khối (block) và phần tử nội tuyến (inline)?\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e Phần tử nội tuyến thường được chứa bên trong phần tử khối.\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Phần tử khối luôn phải nằm trong phần tử nội tuyến.\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Hai loại phần tử này không bao giờ được lồng nhau.\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Phần tử nội tuyến không thể chứa văn bản.\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        true,
+                        false,
+                        false,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Thuộc tính nào sau đây là điểm khác biệt chính giữa phần tử khối và phần tử nội tuyến?\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e Phần tử khối chiếm toàn bộ chiều rộng của trang và bắt đầu trên một dòng mới.\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Phần tử nội tuyến chiếm toàn bộ chiều rộng của trang.\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Phần tử khối không thể chứa nội dung.\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Phần tử nội tuyến không thể thay đổi màu sắc.\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        true,
+                        false,
+                        false,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Thẻ HTML nào mặc định có kiểu hiển thị là block?\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e \u0026ltdiv\u003e  \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e \u0026ltspan\u003e  \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e \u0026ltimg\u003e   \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e \u0026lta\u003e\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        true,
+                        false,
+                        false,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Kiểu hiển thị nào làm phần tử không chiếm không gian trên trang web?\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003eblock  \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e inline   \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e inline-block  \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e none\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        false,
+                        false,
+                        false,
+                        true
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Thuộc tính CSS nào được sử dụng để tạo đường viền xung quanh phần tử HTML?\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e border   \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e outline  \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e box-shadow  \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e padding\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        true,
+                        false,
+                        false,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Thuộc tính CSS nào xác định chiều rộng của đường viền?\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e border-color  \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e border-width  \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e border-style  \u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e outline-width\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        false,
+                        true,
+                        false,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Các giá trị nào sau đây là hợp lệ cho thuộc tính ‘border-style’?\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e solid, dashed, dotted    \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e  block, inline, none \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e center, left, right     \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e  absolute, relative, fixed\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        true,
+                        false,
+                        false,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Khi áp dụng các thuộc tính sau, khung viền của phần tử sẽ có dạng gì?\u003cbr\u003ediv {\u003cbr\u003e    border: 5px solid red;\u003cbr\u003e    border-radius: 50%;\u003cbr\u003e    width: 100px;\u003cbr\u003e    height: 100px;\u003cbr\u003e}\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e Hình vuông màu đỏ, góc không bo tròn.  \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e  Hình tròn màu đỏ, đường viền dày 5px.\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Hình chữ nhật màu đỏ, góc không bo tròn.  \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e  Hình elip màu đỏ, đường viền dày 5px.\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        false,
+                        true,
+                        false,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Bộ chọn lớp trong CSS được khai báo như thế nào?\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e #Tên_bộ_chọn_lớp { thuộc tính: giá trị; }  \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e   .Tên_bộ_chọn_lớp { thuộc tính: giá trị; }\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Tên_bộ_chọn_lớp { thuộc tính: giá trị; }  \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e   *Tên_bộ_chọn_lớp { thuộc tính: giá trị; }\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        false,
+                        true,
+                        false,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Để áp dụng một bộ chọn lớp cho một phần tử HTML, thuộc tính nào được sử dụng?\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e  Id.  \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e  Class.   \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e  Style.   \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e  Name.\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        false,
+                        true,
+                        false,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003eTrong đoạn mã CSS sau, phần tử nào sẽ được áp dụng định dạng?\u003cbr\u003e.highlight {\u003cbr\u003e    color: red;\u003cbr\u003e}\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e Phần tử có id=\"highlight\".     \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e  Phần tử có class=\"highlight\".\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Tất cả các phần tử bên trong thẻ \u0026ltdiv\u003e.    \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e  Phần tử có name=\"highlight\".\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        false,
+                        true,
+                        false,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Cú pháp nào sau đây là đúng để áp dụng nhiều lớp CSS cho một phần tử HTML?\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e \u0026ltdiv class=\"class1, class2\"\u003e   \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e \u0026ltdiv class=\"class1; class2\"\u003e\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e \u0026ltdiv class=\"class1 class2\"\u003e   \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e \u0026ltdiv class=\"class1.class2\"\u003e\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        false,
+                        false,
+                        true,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003eKhi sử dụng bộ chọn lớp trong CSS, ký tự nào được sử dụng để bắt đầu tên lớp?\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e #  \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e . \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e *  \u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e \u0026\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        false,
+                        true,
+                        false,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 18,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Dòng CSS sau được sử dụng để làm gì?\u003cbr\u003e.text_one {\u003cbr\u003e    color: red;\u003cbr\u003e}\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e Thay đổi màu chữ thành đỏ cho tất cả các phần tử.\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Thay đổi màu chữ thành đỏ cho các phần tử có class=\"text_one\".\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Thay đổi màu chữ thành đỏ cho các phần tử có id=\"text_one\".\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Thay đổi màu nền thành đỏ cho các phần tử có class=\"text_one\".\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        false,
+                        true,
+                        false,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 21,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Trong một buổi học về HTML, Minh - một sinh viên đam mê công nghệ, được giao nhiệm vụ phân biệt giữa \u003cb\u003ephần tử khối (block-level)\u003c/b\u003e và \u003cb\u003ephần tử nội tuyến (inline-level)\u003c/b\u003e. Để thực hiện bài tập này, Minh đã viết đoạn mã HTML sau:\u003cbr\u003e\u003cpre\u003e\u003cbr\u003e\u0026lt!DOCTYPE html\u003e\u003cbr\u003e\u0026lthtml lang=\"en\"\u003e\u003cbr\u003e\u0026lthead\u003e\u003cbr\u003e    \u0026ltstyle\u003e\u003cbr\u003e        .box {\u003cbr\u003e            width: 200px;\u003cbr\u003e            height: 50px;\u003cbr\u003e            background-color: lightblue;\u003cbr\u003e        }\u003cbr\u003e        .inline-text {\u003cbr\u003e            color: red;\u003cbr\u003e            font-weight: bold;\u003cbr\u003e        }\u003cbr\u003e    \u0026lt/style\u003e\u003cbr\u003e\u0026lt/head\u003e\u003cbr\u003e\u0026ltbody\u003e\u003cbr\u003e    \u0026ltdiv class=\"box\"\u003eĐây là một phần tử khối\u0026lt/div\u003e\u003cbr\u003e    \u0026lt span class=\"inline-text\"\u003eĐây là một phần tử nội tuyến\u0026lt/span\u003e\u003cbr\u003e    \u0026ltp class=\"box\"\u003eĐây là một đoạn văn bản có kiểu khối\u0026lt/p\u003e\u003cbr\u003e    \u0026ltimg src=\"https://via.placeholder.com/100\" alt=\"Hình ảnh\" class=\"inline-text\"\u003e\u003cbr\u003e\u0026lt/body\u003e\u003cbr\u003e\u0026lt/html\u003e\u003cbr\u003e\u003c/pre\u003e\u003cbr\u003eSau khi chạy thử đoạn mã, Minh quan sát thấy cách hiển thị của các phần tử và đặt ra một số câu hỏi:\u003cbr\u003e- Vì sao một số phần tử lại chiếm toàn bộ chiều ngang, trong khi một số khác chỉ chiếm không gian vừa đủ?\u003cbr\u003e- Có thể thay đổi đặc tính của một phần tử từ khối thành nội tuyến hoặc ngược lại không?\u003cbr\u003eĐể tự kiểm tra kiến thức, Minh đã liệt kê 4 nhận định và muốn xác định chúng đúng hay sai:\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e Phần tử ‘\u0026ltdiv\u003e‘ và ‘\u0026ltp\u003e‘ trong đoạn mã trên là các phần tử khối, vì chúng chiếm toàn bộ chiều ngang của trang.\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Phần tử ‘\u0026ltspan\u003e‘ và ‘\u0026ltimg\u003e‘ trong đoạn mã trên là các phần tử nội tuyến, vì chúng không bắt đầu từ dòng mới và chỉ chiếm không gian nội dung.\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Phần tử ‘\u0026ltdiv\u003e‘ có thể trở thành nội tuyến nếu áp dụng thuộc tính CSS ‘display: inline;’.\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Phần tử ‘\u0026ltp\u003e‘ và ‘\u0026ltdiv\u003e‘ không thể thay đổi đặc tính khối của chúng thành nội tuyến.\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        true,
+                        true,
+                        true,
+                        false
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                },
+                {
+                    "type": 21,
+                    "stype": "NONE",
+                    "content": "\u003clabel class=\"ques_content\"\u003e Lan là một sinh viên đang học về CSS. Trong bài tập về nhà, cô được yêu cầu sử dụng thuộc tính CSS để thiết lập định dạng khung (\u003cb\u003eborder\u003c/b\u003e) cho các phần tử HTML. Lan muốn tạo một danh sách các mặt hàng với mỗi mục được bao quanh bởi một khung viền. Sau khi hoàn thành, Lan viết đoạn mã sau:\u003cbr\u003e\u003cpre\u003e\u003cbr\u003e \u0026lt!DOCTYPE html\u003e\u003cbr\u003e \u0026lthtml lang=\"en\"\u003e\u003cbr\u003e \u0026lthead\u003e\u003cbr\u003e     \u0026ltstyle\u003e\u003cbr\u003e        .item {\u003cbr\u003e            border: 2px solid black;\u003cbr\u003e            padding: 10px;\u003cbr\u003e            margin: 10px;\u003cbr\u003e            width: 300px;\u003cbr\u003e        }\u003cbr\u003e        .highlight {\u003cbr\u003e            border: 3px dashed red;\u003cbr\u003e        }\u003cbr\u003e        .no-border {\u003cbr\u003e            border: none;\u003cbr\u003e        }\u003cbr\u003e     \u0026lt/style\u003e\u003cbr\u003e \u0026lt/head\u003e\u003cbr\u003e \u0026ltbody\u003e\u003cbr\u003e     \u0026ltdiv class=\"item\"\u003eMặt hàng 1 \u0026lt/div\u003e\u003cbr\u003e     \u0026ltdiv class=\"item highlight\"\u003eMặt hàng 2 \u0026lt/div\u003e\u003cbr\u003e     \u0026ltdiv class=\"item no-border\"\u003eMặt hàng 3 \u0026lt/div\u003e\u003cbr\u003e \u0026lt/body\u003e\u003cbr\u003e \u0026lt/html\u003e\u003cbr\u003e\u003c/pre\u003e\u003cbr\u003eSau khi chạy đoạn mã, Lan nhận ra mỗi khung hiển thị khác nhau và cô tự đặt ra các nhận định sau để kiểm tra kiến thức:\u003cbr\u003e\u003c/label\u003e",
+                    "answers": [
+                        "\u003clabel class=\"ques_content\"\u003e Thuộc tính ‘border’ có thể định dạng màu sắc, kiểu dáng, và độ dày của viền khung.\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Mặt hàng 3 hiển thị khung viền mờ nhạt vì thuộc tính ‘border: none;’ chỉ làm giảm độ hiển thị của viền.\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Thuộc tính ‘padding’ điều chỉnh khoảng cách giữa nội dung bên trong và khung viền.\u003cbr\u003e\u003c/label\u003e",
+                        "\u003clabel class=\"ques_content\"\u003e Thuộc tính ‘margin’ điều chỉnh khoảng cách giữa khung viền và các phần tử bên ngoài.\u003cbr\u003e\u003cbr\u003e\u003c/label\u003e"
+                    ],
+                    "TNAnswers": [
+                        true,
+                        false,
+                        true,
+                        true
+                    ],
+                    "TLNAnswers": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "point": 0
+                }
+            ]
+        }
+    ],
+    "useTestStructure": true,
+    "testStructure": [
+        {
+            "stype": "NONE",
+            "number": 0,
+            "point": 0
+        }
+    ],
+    "additionalExportData": {
+        "TNDSPointCalcInfo": [
+            25,
+            50,
+            75,
+            100
+        ]
+    }
+}
