@@ -28,8 +28,10 @@ function renderAns(res) {
     if (res.typeID == TLN || res.typeID == TNDS) {
         document.getElementById("ans").innerHTML = res.titleEnglish + "<br>" + res.questionText + `<br><br>${res.answer}<br>`;
     } else {
-        document.getElementById("ans").innerHTML = res.titleEnglish + "<br>" + res.questionText + `<br>A. ${res.a}<br>B.${res.b}<br>C. ${res.c}<br>D. ${res.d}<br>Đáp Án: ${res.key}<br><br>${res.answer}<br><br><a target="_blank" href="${res.listTikTokVideoModel[0].urlVideo}">video huong dan</a>`;
-
+        if (!res.listTikTokVideoModel[0].urlVideo)
+            document.getElementById("ans").innerHTML = res.titleEnglish + "<br>" + res.questionText + `<br>A. ${res.a}<br>B.${res.b}<br>C. ${res.c}<br>D. ${res.d}<br>Đáp Án: ${res.key}<br><br>${res.answer}<br><br>`;
+        else
+            document.getElementById("ans").innerHTML = res.titleEnglish + "<br>" + res.questionText + `<br>A. ${res.a}<br>B.${res.b}<br>C. ${res.c}<br>D. ${res.d}<br>Đáp Án: ${res.key}<br><br>${res.answer}<br><br><a target="_blank" href="${res.listTikTokVideoModel[0].urlVideo}">video huong dan</a>`;
     }
 }
 
