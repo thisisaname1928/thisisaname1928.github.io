@@ -46,7 +46,7 @@ async function getDouNeccessaryFile(blobReader) {
                 info = entries[i].getData(new zip.TextWriter())
             } else if (entries[i].filename == "data.json") {
                 data = entries[i].getData(new zip.TextWriter())
-            } else if (entries[i].filename.startsWith("/media")) {
+            } else if (entries[i].filename.startsWith("media")) {
                 const blob = await entries[i].getData(new zip.BlobWriter())
 
                 // add to blob map
