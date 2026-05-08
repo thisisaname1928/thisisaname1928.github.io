@@ -21,14 +21,17 @@ function wordPathtoRID(path) {
 let rIDTable = new Map()
 
 async function normalizeDouImgPath() {
-    const imgTags = document.getElementsByTagName('img')
+    const imgTags = Array.from(document.querySelectorAll('img'));
 
-    for (i = 0; i < imgTags.length; i++) {
-        currentTagSrc = imgTags[i].getAttribute("src")
+    imgTags.forEach((img) => {
+        let currentTagSrc = img.getAttribute("src");
+
         if (currentTagSrc.startsWith("media\\") || currentTagSrc.startsWith("media/")) {
-            imgTags[i].setAttribute("src", rIDTable.get(wordPathtoRID(currentTagSrc)))
+            const newSrc = rIDTable.get(wordPathtoRID(currentTagSrc));
+            img.setAttribute("src", newSrc);
+            img.classList.add("question-img");
         }
-    }
+    });
 }
 
 

@@ -642,3 +642,7 @@
             word-wrap: break-word;
             overflow-x: auto;
         }
+
+        .question-img {
+            width: 99%;
+        }
